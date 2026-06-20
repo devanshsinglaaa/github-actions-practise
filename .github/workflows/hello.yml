@@ -1,0 +1,26 @@
+#Workflow
+# should have name
+name: Hello
+#indentation is mandatory for going inside every block.
+#On tells when workflow should run (different options)
+on:
+  workflow_dispatch: 
+
+#jobs tells what to be done, there can be one or multiple jobs. (jobs is an object, so needs indentation)
+#should be inside the workflow
+jobs:
+  #first-job
+  say-hello:
+    # This creates a ephermal container with ubuntu.
+    runs-on: ubuntu-latest
+    #That ephermal container will have steps to execute, hence name those steps and use run:
+    steps:
+    - name: Say hello to every one
+      run: echo "Hello Dosto"
+
+  
+#steps
+#should be inside the jobs
+
+#Actions
+#should be inside the steps
