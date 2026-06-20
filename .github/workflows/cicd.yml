@@ -24,4 +24,3 @@ jobs:
     steps:
       - name: Deploying on machines
         run: echo "Deployment Phase"
-      - 
