@@ -1,0 +1,22 @@
+# Goal : Whenever any commit is done to any .py file in this repo,
+# The linter will check if the syntax, identation, format etc. (linting) is correct or not.
+
+name: Linting
+
+on: 
+  push:
+    paths: "*.py"
+
+jobs:
+  code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: code clone/checkout
+        uses: actions/checkout@v4
+
+      - name: install linter (ruff)
+        run: pip install ruff
+
+      - name: check files for linting...
+        run: ruff check .
+        
